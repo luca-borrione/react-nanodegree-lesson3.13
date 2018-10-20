@@ -4,13 +4,17 @@ import './App.css';
 
 class App extends Component {
 
+	/**
+	 * @namespace
+	 * @property {string}	value	- current user input text
+	 */
 	state = {
-		text: ''
+		value: ''
 	};
 
 	updateText = event => {
 		this.setState({
-			text: event.target.value
+			value: event.target.value
 		});
 	}
 
@@ -23,14 +27,15 @@ class App extends Component {
 				</header>
 				<div className="container">
 					<input
-						type="text"
-						placeholder="Say Something"
-						onChange={this.updateText}
+						type = "text"
+						placeholder = "Say Something"
+						value = {this.state.value}
+						onChange = {this.updateText}
 					/>
-					{this.state.text.length > 0 && (
+					{this.state.value.length > 0 && (
 						<div>
 							<p className="echo">Echo:</p>
-							<p>{this.state.text}</p>
+							<p>{this.state.value}</p>
 						</div>
 					)}
 				</div>
