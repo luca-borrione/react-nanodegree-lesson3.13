@@ -5,8 +5,8 @@ import './App.css';
 class App extends Component {
 
 	/**
-	 * @namespace
-	 * @property {string}	value	- current user input text
+	 * @member	 {object}	state
+	 * @property {string}	state.value	- current user input text
 	 */
 	state = {
 		value: ''
